@@ -1,6 +1,6 @@
-
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-
+import { useLocation } from 'react-router-dom'
 
 function SeachResult() {
     const [show,setShow]=useState([])
@@ -53,12 +53,12 @@ function SeachResult() {
   <div className="px-6 pt-4 pb-2">
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{a.show.language}</span>
     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{a.show.genres}</span>
-    <button onClick={()=>favourite(a.show.id)} className={` bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2mb-2 ${show.fav ? "text-red-600":"text-gray-500"}`}>Add to favourites</button>
+    <button className={` bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2mb-2 ${show.fav ? "text-red-600":"text-gray-500"}`}>Add to favourites</button>
   </div>
   </div>
 
    ))}
-  </div>
+                        </div>
                     
 </div>
                     
