@@ -14,7 +14,7 @@ function App() {
     <>
          <Routes>
            <Route path='/' element={<Home/>}></Route>
-           <Route path='/search' element={<SeachResult/>}></Route>
+           <Route path='/search/:query' element={<SeachResult/>}></Route>
         </Routes>
        
     </>

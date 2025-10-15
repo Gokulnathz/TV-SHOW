@@ -4,12 +4,13 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 function Home() {
      const [show,setShow]=useState('');
+    
      const navigate=useNavigate();
 
   const search=()=>{
     console.log("show=",show)
     localStorage.setItem("showname",show)
-    navigate("/search");
+    navigate(`/search/${show}`);
 }
   return (
     <>
